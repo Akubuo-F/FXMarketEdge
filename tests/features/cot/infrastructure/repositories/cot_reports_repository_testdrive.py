@@ -1,5 +1,5 @@
-from src.asset import Asset
-from src.exchange import Exchange
+from src.shared.entities.asset import Asset
+from src.shared.entities.exchange import Exchange
 from src.features.cot.domain.entities.cot_report import CotReport
 from src.features.cot.infrastructure.repositories.cot_reports_repository import CotReportsRepository
 
