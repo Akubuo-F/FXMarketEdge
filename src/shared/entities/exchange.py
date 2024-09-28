@@ -1,8 +1,0 @@
-from enum import Enum
-
-
-class Exchange(Enum):
-    FOREX = "CHICAGO MERCANTILE EXCHANGE"
-    CRYPTO = "CHICAGO MERCANTILE EXCHANGE"
-    INDICES = ""
-    COMMODITY = "COMMODITY EXCHANGE INC"

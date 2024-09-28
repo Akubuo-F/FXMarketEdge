@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.asset import Asset
+from src.shared.entities.asset import Asset
 from src.features.cot.domain.entities.cot_report import CotReport
 
 

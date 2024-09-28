@@ -4,3 +4,4 @@ beautifulsoup4
 cot_reports
 pycot-reports
 pydantic-settings
+pytz

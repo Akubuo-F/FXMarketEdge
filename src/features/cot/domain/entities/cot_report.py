@@ -1,3 +1,5 @@
+from src.features.cot.domain.entities.traders.commercial_traders_report import CommercialTradersReport
+from src.features.cot.domain.entities.traders.non_commercial_traders_report import NonCommercialTradersReport
 from src.features.cot.domain.entities.traders.traders_report import TradersReport
 
 
@@ -8,15 +10,15 @@ class CotReport:
             release_date: str,
             market_name: str,
             open_interest: int,
-            non_commercial_traders_report: TradersReport,
-            commercial_traders_report: TradersReport,
+            non_commercial_traders_report: NonCommercialTradersReport,
+            commercial_traders_report: CommercialTradersReport,
             delta_open_interest: int,
     ):
         self._release_date: str = release_date
         self._market_name: str = market_name
         self._open_interest: int = open_interest
-        self._non_commercial_traders_report: TradersReport = non_commercial_traders_report
-        self._commercial_traders_report: TradersReport = commercial_traders_report
+        self._non_commercial_traders_report: NonCommercialTradersReport = non_commercial_traders_report
+        self._commercial_traders_report: CommercialTradersReport = commercial_traders_report
         self._delta_open_interest: int = delta_open_interest
 
     def __repr__(self) -> str:
@@ -50,11 +52,11 @@ class CotReport:
         return self._open_interest
 
     @property
-    def non_commercial_traders_report(self) -> TradersReport:
+    def non_commercial_traders_report(self) -> NonCommercialTradersReport:
         return self._non_commercial_traders_report
 
     @property
-    def commercial_traders_report(self) -> TradersReport:
+    def commercial_traders_report(self) -> CommercialTradersReport:
         return self._commercial_traders_report
 
     @property

@@ -1,24 +1,22 @@
+from src.features.cot.domain.entities.reported_assets import ReportedAssets
+
+
 class Asset:
 
-    def __init__(self, name: str, abbreviation: str, exchange_name: str):
-        self._name: str = name
-        self._abbreviation: str = abbreviation
-        self._exchange_name: str = exchange_name
+    def __init__(self, reported_asset: ReportedAssets):
+        self._market_and_exchange_name: str = reported_asset.value
+        self._abbreviation: str = reported_asset.name
 
     def __repr__(self) -> str:
-        return f"Asset(Name={self._name}, Abbreviation={self._abbreviation})"
+        return f"Asset(Abbreviation={self._abbreviation}, Market_and_Exchange_Name={self._market_and_exchange_name})"
 
     def __str__(self) -> str:
         return self.__repr__()
 
     @property
-    def name(self) -> str:
-        return self._name
+    def market_and_exchange_name(self) -> str:
+        return self._market_and_exchange_name
 
     @property
     def abbreviation(self) -> str:
         return self._abbreviation
-
-    @property
-    def exchange_name(self) -> str:
-        return self._exchange_name

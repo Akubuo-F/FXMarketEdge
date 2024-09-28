@@ -1,8 +1,8 @@
-from src.asset import Asset
+from src.shared.entities.asset import Asset
 from src.features.cot.domain.entities.traders.commercial_traders_report import CommercialTradersReport
 from src.features.cot.domain.entities.cot_report import CotReport
 from src.features.cot.domain.entities.traders.non_commercial_traders_report import NonCommercialTradersReport
-from src.features.cot.domain.repositories.cot_repository import CotRepository
+from src.features.cot.domain.rules.cot_repository import CotRepository
 
 from pycot.reports import CommitmentsOfTraders
 import pandas as pd
